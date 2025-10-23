@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# SPDX-FileCopyrightText: 2025 Komiiya Takumi
+# SPDX-FileCopyrightText: 2025 Komiya Takumi
 import sys
 
 ans = 0
