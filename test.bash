@@ -4,12 +4,12 @@
 
 set -eu
 
-chmod +x ./countchar.py
+chmod +x ./test_countchar.py
 
 test_case () {
     input="$1"
     expected="$2"
-    result=$(echo -ne "$input" | ./countchar.py)
+    result=$(echo -ne "$input" | ./test_countchar.py)
     if [ "$result" = "$expected" ]; then
         echo "✅ PASS: '$input' → $result"
     else
