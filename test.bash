@@ -2,15 +2,27 @@
 # SPDX-FileCopyrightText: 2025 Komiya Takumi
 # SPDX-License-Identifier: BSD-3-Clause
 
-ng () {
-        echo ${1}行目が違うよ
-　　　　res=1
+set -eu
+
+chmod +x ./countchar.py
+
+test_case () {
+    input="$1"
+    expected="$2"
+    result=$(echo -n "$input" | ./countchar.py)
+    if [ "$result" = "$expected" ]; then
+        echo "✅ PASS: '$input' → $result"
+    else
+        echo "❌ FAIL: '$input' → got '$result', expected '$expected'" >&2
+        exit 1
+    fi
 }
 
-res=0
+test_case "Hello" 5
+test_case "Hello World" 11
+test_case "こんにちは" 5
+test_case "abc\ndef" 6
+test_case "" 0
 
-out=$(seq 5 | ./plus)
-[ "${out}" = 15 ] || ng "$LINENO"
+echo "🎉 All tests passed!"
 
-[ "${res}" = 0 ] && echo OK
-exit $res
