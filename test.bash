@@ -9,7 +9,7 @@ chmod +x ./countchar.py
 test_case () {
     input="$1"
     expected="$2"
-    result=$(echo -n "$input" | ./countchar.py)
+    result=$(echo -ne "$input" | ./countchar.py)
     if [ "$result" = "$expected" ]; then
         echo "✅ PASS: '$input' → $result"
     else
