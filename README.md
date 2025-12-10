@@ -14,7 +14,7 @@
 ## 🔹 使用例
 
 ```bash
-$ echo "Hello World" | ./test_countchar.py
+$ echo "Hello World" | ./countchar
 ```
 
 出力：
@@ -34,7 +34,7 @@ $ cd robosys2025
 
 実行権限を付与
 ```bash
-$ chmod +x test_countchar.py
+$ chmod +x countchar
 ```
 
 ---
@@ -42,7 +42,7 @@ $ chmod +x test_countchar.py
 ## 🔹実行方法
 
 ```bash
-$ echo "abc" | ./test_countchar.py
+$ echo "abc" | ./countchar
 ```
 
 ```bash
@@ -54,7 +54,7 @@ $ echo "abc" | ./test_countchar.py
 改行を含む入力も処理できます（改行はカウントされません）：
 
 ```bash
-$ echo -e "abc\ndef" | ./test_countchar.py
+$ echo -e "abc\ndef" | ./countchar
 ```
 
 ```bash 
