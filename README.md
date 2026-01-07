@@ -1,7 +1,5 @@
 # テキストの文字数を数えて出力するコマンド
-
 ![test](https://github.com/takumi1009/robosys2025/actions/workflows/test.yml/badge.svg)
-
 ---
 
 ## 🔹 概要
@@ -15,11 +13,6 @@
 
 ```bash
 $ echo "Hello World" | ./countchar
-```
-
-出力：
-
-```bash
 11
 ```
 
@@ -43,9 +36,6 @@ $ chmod +x countchar
 
 ```bash
 $ echo "abc" | ./countchar
-```
-
-```bash
 3
 ```
 
@@ -55,10 +45,7 @@ $ echo "abc" | ./countchar
 
 ```bash
 $ echo -e "abc\ndef" | ./countchar
-```
-
-```bash 
-6
+ 6
 ```
 
 ---
@@ -71,9 +58,6 @@ $ echo -e "abc\ndef" | ./countchar
 ## 必要なソフトウェア
 - Python テスト済みバージョン: 3.7〜3.12
 - bash（テストスクリプトで使用）
-
-## テスト環境
-
 - OS:Ubuntu 22.04.5 LTS
 
 ## ライセンス
